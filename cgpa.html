@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+  <title>CSE</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: lightslategrey;">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="home.html" style="font-size:170%">CGPA CALC</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a style="font-size:170%" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          CompSci
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="cse1.html">SEMESTER-1</a>
+          <a class="dropdown-item" href="cse2.html">SEMESTER-2</a>
+          <a class="dropdown-item" href="cse3.html">SEMESTER-3</a>
+          <a class="dropdown-item" href="cse4.html">SEMESTER-4</a>
+          <a class="dropdown-item" href="cse5.html">SEMESTER-5</a>
+          <a class="dropdown-item" href="cse6.html">SEMESTER-6</a>
+          <a class="dropdown-item" href="cse7.html">SEMESTER-7</a>
+          <a class="dropdown-item" href="cse8.html">SEMESTER-8</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div align="center">
+  <form>
+    <div class="form-group" > 
+      <label for="state_id" class="control-label">SEMESTER-1</label>
+      <input type="text" class="form-control" id="1" style="width: 30%;" value="0">
+    </div>
+    <div class="form-group"> 
+        <label for="state_id" class="control-label">SEMESTER-2</label>
+        <input type="text" class="form-control" id="2" style="width: 30%;" value="0">
+    </div>
+    <div class="form-group"> 
+        <label for="state_id" class="control-label">SEMESTER-3</label>
+        <input type="text" class="form-control" id="3" style="width: 30%;" value="0">
+    </div>
+    <div class="form-group"> 
+        <label for="state_id" class="control-label">SEMESTER-4</label>
+        <input type="text" class="form-control" id="4" style="width: 30%;" value="0">
+    </div>
+    <div class="form-group"> 
+        <label for="state_id" class="control-label">SEMESTER-5</label>
+        <input type="text" class="form-control" id="5" style="width: 30%;" value="0">
+    </div>
+    <div class="form-group"> 
+        <label for="state_id" class="control-label">SEMESTER-6</label>
+        <input type="text" class="form-control" id="6" style="width: 30%;" value="0">
+    </div>
+    <div class="form-group"> 
+        <label for="state_id" class="control-label">SEMESTER-7</label>
+        <input type="text" class="form-control" id="7" style="width: 30%;" value="0">
+    </div>
+    <div class="form-group"> 
+        <label for="state_id" class="control-label">SEMESTER-8</label>
+        <input type="text" class="form-control" id="8" style="width: 30%;" value="0">
+    </div>
+      <div class="form-group"> <!-- Submit Button -->
+        <button type="button" class="btn btn-primary" onclick="Cgpa()">Calculate</button>
+      </div>  
+    </form>
+  </div>
+</body>
+<script>
+    function Cgpa(){
+        var value1 = parseFloat(document.getElementById("1").value);
+        var value2 = parseFloat(document.getElementById("2").value);
+        var value3 = parseFloat(document.getElementById("3").value);
+        var value4 = parseFloat(document.getElementById("4").value);
+        var value5 = parseFloat(document.getElementById("5").value);
+        var value6 = parseFloat(document.getElementById("6").value);
+        var value7 = parseFloat(document.getElementById("7").value);
+        var value8 = parseFloat(document.getElementById("8").value);
+        var sem = 8.0
+        if(value1==0)
+            sem-=1;
+        if(value2==0)
+            sem-=1;
+        if(value3==0)
+            sem-=1;
+        if(value4==0)
+            sem-=1;
+        if(value5==0)
+            sem-=1;
+        if(value6==0)
+            sem-=1;
+        if(value7==0)
+            sem-=1;
+        if(value8==0)
+            sem-=1;
+        var cgpa = (value1+value6+value2+value3+value4+value5+value7+value8)/sem; 
+        console.log(cgpa.toFixed(3));
+    }
+</script>
+</html>

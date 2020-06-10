@@ -1,0 +1,101 @@
+body{
+	height:700px;
+	margin:0px;
+	padding:0px;
+	
+}
+.base{
+	position:absolute;
+	width:100%;
+	top:0px;
+	left:0px;
+
+}
+#logo{
+	
+	margin-top:20px;
+	
+	height:38px;
+	width:500px;
+}
+
+#info1{
+	width:500px;
+	margin-top:25px;
+	font-family: 'Open Sans', sans-serif;
+	font-size:38px;
+	color:#555557;
+	
+}
+#data{
+	width:500px;
+	margin-top:25px;
+	font-family: 'Open Sans', sans-serif;
+	font-size:30px;
+	color:#555557;
+	
+}
+#form1{
+	margin-top:17px;
+	width:355px;
+	height:280px;
+    padding-top:40px;
+
+}
+#mailbox{
+	width:270px;
+	height:42px;
+	border-radius:5px 5px 5px 5px;
+	background:white;
+	
+	font-size:18px;
+	margin-top:20px;
+	border-width: 0px;
+	border-style:solid;
+	border-color: blue;
+}
+#button{
+	width:270px;
+	height:35px;
+	
+	margin-top:10px;
+	background:#498af2;
+	font-family:verdana;
+	font-size:14px;
+	color:white;
+	border-radius:5px 5px 5px 5px;
+	border-width: 1px;
+	border-style:solid;
+	border-color: gray;
+	cursor:pointer;
+	outline:none;
+	
+}
+
+.Table
+{
+	display: table;
+}
+
+.Heading
+{
+	display: table-row;
+    font-weight: bold;
+    text-align: center;
+}
+.Row
+{
+	display: table-row;
+}
+.Cell
+{
+	width: 30%;
+    color: #000000;
+    display: table-cell;
+    background-color: #95cee8 ;
+    outline: #000000 solid 1px;
+}
+p{
+	color: #000000;
+	/*word-break: break-all;*/
+}

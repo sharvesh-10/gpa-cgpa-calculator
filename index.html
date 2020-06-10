@@ -1,0 +1,58 @@
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="style1.css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <title>Ajax Example</title>
+<script type="text/javascript">
+function uservalidate()
+{
+ var username = document.getElementById("un").value;
+ var password = document.getElementById("ps").value;
+ var xmlhttp=new XMLHttpRequest();
+ xmlhttp.onreadystatechange=function()
+ {
+   if(xmlhttp.readyState==4 && xmlhttp.status==200)
+   {
+      var resp = xmlhttp.responseXML;
+      var stat = resp.getElementsByTagName("NAME")[0].childNodes[0].nodeValue;
+	  if (stat == "UNF")
+      {
+		alert("invalid user");
+      }
+	  else
+      {
+		window.location.replace("home.html");
+      }
+   }
+}
+xmlhttp.open("GET","fetch.php?name="+username+"&password="+password,true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body style="background-image: url(bg.jpg);">
+    <center>
+        <form>
+        <div>
+            <div id="info1">
+                WELCOME TO R-17 CSE CGPA AND GPA CALCULATOR
+            </div>
+            <div id="form1">
+                <div id="mailbox">
+                    <input type="text" id="un" name="un" placeholder="name" style="width:270px; height:42px; border: solid 1px #c2c4c6; font-size:16px; padding-left:8px;" />
+                </div>
+                <div id="mailbox">
+                    <input placeholder="password" type="password"  id="ps"   style="width:270px; height:42px; border: solid 1px #c2c4c6; font-size:16px; padding-left:8px;"/>
+                </div>
+                <div>
+                    <button type="button" id="button" onclick="uservalidate()">LOGIN</button>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        </form>
+    </center>
+</body>
+</html>
